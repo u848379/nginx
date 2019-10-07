@@ -8,13 +8,7 @@ RUN mkdir -p /etc/nginx/certs
 
 RUN mkdir -p /var/www/html
 
-COPY /NGINX/default.conf /etc/nginx/conf.d/default.conf
-
-COPY /SSL/tls/my-service.crt /etc/nginx/certs/server.crt
-
-COPY /SSL/tls/my-service.key /etc/nginx/certs/server.key
-
-COPY /SSL/tls/ca.crt /etc/nginx/certs/ca.crt
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 RUN echo “The Nginx Web Server is Running” > /var/www/html/index.html
 
