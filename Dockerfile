@@ -1,6 +1,6 @@
 FROM nginx:1.17
 
-USER root
+USER nginx
 
 MAINTAINER u848379
 
